@@ -1,0 +1,7 @@
+@mixin clearFloat {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
