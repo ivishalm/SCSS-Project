@@ -30,3 +30,37 @@ body {
     animation: MoveInRight 1s ease-out 1 forwards;
   }
 }
+
+.heading-secondary {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 15vh;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 0.3s all;
+  &:hover {
+    transform: skewX(1deg) skewY(2deg);
+    text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.heading-third {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.3rem;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

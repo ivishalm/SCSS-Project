@@ -1,7 +1,7 @@
 .row {
   max-width: 114rem;
   margin: 0 auto;
-  background-color: #eee;
+  // background-color: #eee;
   color: #333;
 
   &:not(:last-child) {
@@ -9,7 +9,7 @@
   }
 
   [class^="col-"] {
-    background-color: chocolate;
+    // background-color: chocolate;
     float: left;
 
     &:not(:last-child) {
