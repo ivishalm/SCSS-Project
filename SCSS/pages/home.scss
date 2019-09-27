@@ -1,4 +1,31 @@
 .section-about {
+  background-color: $color-grey-light;
+  margin-top: -15vh;
+  padding-bottom: 30vh;
+}
+
+.feature-section {
+  background-image: linear-gradient(
+      to right,
+      $Light-green-opac,
+      $Dark-green-opac
+    ),
+    url("/images/nat-4.jpg");
+  min-height: 70vh;
+  transform: skewY(-5deg);
+  margin-top: -10vh;
+  display: flex;
+  align-items: center;
+
+  & > * {
+    transform: skewY(5deg);
+  }
+}
+
+
+.section-tours {
+    margin-top: -10rem;
+    padding-top: 10rem;
     background-color: $color-grey-light;
-    margin-top: -15vh;
+    min-height: 70vh;
 }
