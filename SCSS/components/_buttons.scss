@@ -1,5 +1,5 @@
 .btn {
-  &:link {
+  &, &:link {
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
@@ -7,6 +7,10 @@
     border-radius: 10rem;
     transition: all 0.5s;
     position: relative;
+    // change for <button> element
+    border: none;
+    cursor: pointer;
+
     &:hover {
       transform: translateY(-0.3rem);
 
@@ -17,6 +21,7 @@
     }
     &:active {
       transform: translateY(-0.1rem);
+      outline: none;
     }
 
     &::after {

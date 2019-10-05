@@ -1,0 +1,17 @@
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba(#ffff, 0.9) 50%,
+      rgba(#fff, 0) 50%
+    ),
+    url("/images/nat-10.jpg");
+  background-size: cover;
+  height: 50rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.4);
+ 
+  &__form {
+    width: 50%;
+    padding: 6rem;
+  }
+}
