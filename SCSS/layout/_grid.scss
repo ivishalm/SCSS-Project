@@ -1,19 +1,32 @@
 .row {
   max-width: 114rem;
   margin: 0 auto;
-  // background-color: #eee;
   color: #333;
+
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+
 
   &:not(:last-child) {
     margin-bottom: 6rem;
   }
 
   [class^="col-"] {
-    // background-color: chocolate;
     float: left;
 
     &:not(:last-child) {
       margin-right: $gutter-width;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: 6rem;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
     }
   }
 

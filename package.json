@@ -4,11 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "scss": "node-sass SCSS/pages/main.scss CSS/style.css -w"
+    "compile:scss": "node-sass SCSS/pages/main.scss CSS/style.comp.css",
+    "concat:css": "concat -o CSS/style.concat.css CSS/icon_styles.css CSS/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" CSS/style.concat.css -o CSS/style.prefix.css",
+    "compress:css": "node-sass CSS/style.prefix.css CSS/style.min.css --output-style compressed",
+    "build:css": "npm-run-all compile:scss concat:css prefix:css compress:css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "autoprefixer": "^9.6.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3"
   }
 }

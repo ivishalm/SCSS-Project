@@ -5,3 +5,26 @@
     clear: both;
   }
 }
+
+@mixin respond($breakpoints) {
+  @if $breakpoints == phone {
+    @media (max-width: 600px) {
+      @content  
+    }
+  };
+  @if $breakpoints == tab-port {
+    @media (max-width: 900px) {
+      @content  
+    }
+  };
+  @if $breakpoints == tab-land {
+    @media (max-width: 1200px) {
+      @content  
+    }
+  };
+  @if $breakpoints == big-desk {
+    @media (min-width: 1800px) {
+      @content 
+    }
+  };
+}

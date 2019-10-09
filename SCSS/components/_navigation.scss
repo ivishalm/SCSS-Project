@@ -12,6 +12,15 @@
     cursor: pointer;
     z-index: 2000;
     text-align: center;
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 3rem;
+    }
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__checkbox {
@@ -81,6 +90,15 @@
       $color-primary-dark
     );
     transition: transform .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 2.5rem;
+    }
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav {
